@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Currículo • Jossane Cardoso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0f1e;
+      --panel: rgba(18, 25, 56, 0.85);
+      --accent: #4fd1ff;
+      --accent-soft: rgba(79, 209, 255, 0.2);
+      --text: #e6ecff;
+      --muted: #9aa4c7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #10183a, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--accent-soft) 1px, transparent 1px),
+        linear-gradient(90deg, var(--accent-soft) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.15;
+      z-index: -1;
+      animation: moveGrid 20s linear infinite;
+    }
+
+    @keyframes moveGrid {
+      from { background-position: 0 0; }
+      to { background-position: 60px 60px; }
+    }
+
+    header {
+      padding: 60px 20px 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.8rem;
+      color: var(--accent);
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--accent-soft);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
+      animation: fadeUp 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+    .card:nth-child(5) { animation-delay: 0.5s; }
+
+    @keyframes fadeUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .skills span {
+      display: inline-block;
+      margin: 6px 6px 0 0;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: rgba(79, 209, 255, 0.12);
+      border: 1px solid var(--accent-soft);
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+
+    .timeline-item {
+      margin-bottom: 18px;
+    }
+
+    .timeline-item strong {
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .timeline-item span {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 800px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid"></div>
+
+  <header>
+    <h1>Jossane Cardoso</h1>
+    <p>Desenvolvedora de Software</p>
+  </header>
+
+  <main>
+    <!-- PERFIL -->
+    <div class="card">
+      <h2>Perfil</h2>
+      <p>
+        Desenvolvedora de software com experiência em projetos acadêmicos,
+        institucionais e hackathons, atuando com lógica de programação,
+        organização de dados, APIs e boas práticas de desenvolvimento.
+        Interesse em produtos digitais, automação e Inteligência Artificial.
+      </p>
+    </div>
+
+    <!-- EXPERIÊNCIA -->
+    <div class="card">
+      <h2>Experiência</h2>
+
+      <div class="timeline-item">
+        <strong>Fundação Casa de José Américo</strong>
+        <span>Estágio em Tecnologia da Informação • 2024</span>
+        <p>
+          Atuação na organização, modelagem e preservação de acervos digitais,
+          com foco no acervo dos governadores. Trabalhei com descrição
+          arquivística, estruturação de metadados, uso dos sistemas Archivematica
+          e AtoM, apoio à configuração de banco de dados, documentação técnica
+          e padronização de processos, sempre alinhada à qualidade, manutenção
+          e acesso à informação.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <strong>Hackathons de Tecnologia</strong>
+        <span>Projetos de Software</span>
+        <p>
+          Participação no desenvolvimento de soluções digitais voltadas a
+          automação de atendimento, chatbots e gestão de demandas. Atuei na
+          definição de problemas, levantamento de requisitos, criação de fluxos
+          lógicos e conversacionais, aplicação de conceitos de Inteligência
+          Artificial e testes das soluções, com foco em experiência do usuário,
+          escalabilidade e impacto real.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <strong>Academia Backend – Accenture</strong>
+        <span>Formação Prática</span>
+        <p>
+          Desenvolvimento de aplicações backend simulando ambiente corporativo,
+          com foco em lógica de programação, organização de camadas, regras de
+          negócio, APIs REST, versionamento com Git e aplicação de boas práticas
+          como Clean Code, leitura de requisitos e melhoria contínua do código.
+        </p>
+      </div>
+    </div>
+
+    <!-- FORMAÇÃO -->
+    <div class="card">
+      <h2>Formação</h2>
+      <p>
+        <strong>Universidade Estadual da Paraíba (UEPB)</strong><br>
+        Ensino Superior Completo em <strong>Análise e Desenvolvimento de Sistemas</strong><br>
+      </p>
+    </div>
+
+    <!-- HABILIDADES -->
+    <div class="card">
+      <h2>Habilidades Técnicas</h2>
+      <div class="skills">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>Python</span>
+        <span>APIs REST</span>
+        <span>PostgreSQL</span>
+        <span>Git/GitHub</span>
+        <span>Clean Code</span>
+        <span>Inteligência Artificial</span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2025 • Currículo • Interface Sci-Fi
+  </footer>
+
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      document.body.style.background =
+        `radial-gradient(circle at ${x}% ${y}%, #16206a, #0a0f1e)`;
+    });
+  </script>
+</body>
+</html>
